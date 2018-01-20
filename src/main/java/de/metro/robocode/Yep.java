@@ -1,4 +1,4 @@
-package de.metro.robocode;
+package main.java.de.metro.robocode;
 
 import robocode.*;
 import java.awt.Color;
