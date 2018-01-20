@@ -1,9 +1,9 @@
-package main.java.Yep;
+package de.metro.robocode;
 
 import robocode.*;
 import java.awt.Color;
 
-public class yep extends RateControlRobot {
+public class Yep extends RateControlRobot {
 
     double deplasarea;
     int ready=0;
