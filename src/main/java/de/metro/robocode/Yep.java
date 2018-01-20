@@ -44,14 +44,15 @@ public class Yep extends RateControlRobot {
     }
 
     double calculate_and_move() {
+		int val=20;
         if (getHeading() == 0) {
-            return (600 - getY()-1);
+            return (600 - getY()-val);
         } else if (getHeading() == 90) {
-            return (600 - getX()-1);
+            return (800 - getX()-val);
         } else if (getHeading() == 180) {
-            return (getY()-1);
+            return (getY()-val);
         } else if (getHeading() == 270) {
-            return (getX()-1);
+            return (getX()-val);
         }
         return 800;
     }
