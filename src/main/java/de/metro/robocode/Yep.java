@@ -9,37 +9,37 @@ public class Yep extends RateControlRobot {
     double deplasarea;
     int ready = 0;
     int first_time = 0;
-    int count = 0; 
-    boolean setup=true;
-	
-    double gunTurnAmt; 
-    String trackName; 
-    int minim=1;
-	
+    int count = 0;
+    boolean setup = true;
+
+    double gunTurnAmt;
+    String trackName;
+    int minim = 2;
+
     public void run() {
 
         init();
 
         while (true) {
             if (getOthers() < minim) {
-				if(setup){
-					trackName = null;
-				    setAdjustGunForRobotTurn(true);
-				    gunTurnAmt = 10;
-					setup=false;			
-				}
+                if (setup) {
+                    trackName = null;
+                    setAdjustGunForRobotTurn(true);
+                    gunTurnAmt = 10;
+                    setup = false;
+                }
                 turnGunRight(gunTurnAmt);
-                
+
                 count++;
-                
+
                 if (count > 2) {
                     gunTurnAmt = -10;
                 }
-               
+
                 if (count > 5) {
                     gunTurnAmt = 10;
                 }
-                
+
                 if (count > 11) {
                     trackName = null;
                 }
@@ -56,8 +56,7 @@ public class Yep extends RateControlRobot {
     }
 
     public void init() {
-        
-		
+
         //stabileste culorile
         setBodyColor(Color.orange);
         setGunColor(Color.red);
@@ -121,7 +120,7 @@ public class Yep extends RateControlRobot {
 
                 turnGunRight(gunTurnAmt);
                 turnRight(e.getBearing());
-				
+
                 ahead(e.getDistance() - 140);
                 return;
             }
