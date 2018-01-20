@@ -7,7 +7,6 @@ public class Yep extends RateControlRobot {
 
     double deplasarea;
     int ready=0;
-    int first_time=0;
             
     public void run() {
         
