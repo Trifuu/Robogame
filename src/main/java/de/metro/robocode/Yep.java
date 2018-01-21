@@ -49,7 +49,6 @@ public class Yep extends RateControlRobot {
                 ahead(calculate_and_move());
 
                 ready = 0;
-
                 turnRight(90);
             }
         }
